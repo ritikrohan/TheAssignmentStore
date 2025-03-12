@@ -9,7 +9,7 @@ const PaypalButton = () => {
           purchase_units: [
             {
               amount: {
-                value: "30", // Replace with your amount
+                value: "24.99", // Replace with your amount
               },
             },
           ],

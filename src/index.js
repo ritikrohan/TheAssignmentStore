@@ -7,7 +7,7 @@ import { PayPalScriptProvider } from "@paypal/react-paypal-js";
 import { BrowserRouter } from 'react-router-dom';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
-const PAYPAL_CLIENT_ID = "AYN401LNroYbpqsP_6jtJKqg32vAy4U18BuJr681bLT4FblGqZpglwk4xjcWYoP3zWGmQZsReleuC3Ie";
+const PAYPAL_CLIENT_ID = "AXZ1WLY7uFGftknbbHiry_6ZvRqySwpJokOFLh8mouJQV00evyzqEaai8SZclUkCccWNrj14strcTalt";
 
 root.render(
   <PayPalScriptProvider options={{ "client-id": PAYPAL_CLIENT_ID }}>
