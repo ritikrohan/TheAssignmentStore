@@ -84,6 +84,7 @@ function App() {
                 <div style={{ display: 'flex', justifyContent: 'flex-start', flexDirection: 'column' }}>
                   <p className="price">{selectedAssignment.price}</p>
                   <PaypalButton/>
+                  {/* this can be uncommented just in case we want to add the button */}
                   {/* <button onClick={() => handlePayNow(selectedAssignment.id)}>Pay Now</button> */}
                   <div className="additional-info" style={{ display: 'flex', justifyContent: 'center', flexDirection: 'column', alignItems: 'center' }}>
                     <p className="category">Category: {selectedAssignment.category}</p>
