@@ -22,17 +22,6 @@ function App() {
     }
   }, [assignmentTitle]);
 
-  const handlePayNow = (id) => {
-    setAssignmentId(id);
-    const email = prompt("Please enter your email to receive the download link:");
-    if (email) {
-      setEmail(email);
-      // Simulate sending the download link via email
-      alert(`Download link for Assignment ${id} will be sent to ${email}.`);
-      // Here you would integrate with a backend to handle payment and email delivery
-    }
-  };
-
   const handleAssignmentClick = (assignment) => {
     setSelectedAssignment(assignment);
     navigate(`/assignments/${assignment.title}`);
