@@ -9,6 +9,8 @@ import PaypalButton from "./PaypalButton";
 import powered from "./assets/powered.png";
 
 function App() {
+  const [email] = useState("");
+  const [assignmentId] = useState(null);
   const [selectedAssignment, setSelectedAssignment] = useState(null);
   const navigate = useNavigate();
   const { assignmentTitle } = useParams();
