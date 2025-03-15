@@ -14,11 +14,5 @@ export const assignments = [
       "price": "$24.99",
       "category": "DSC395T",
       "tags": ["2025", "395t", "algorithms", "data", "disc", "dsc-395t", "software", "solved", "spring", "structures", "wikiracer"]
-    },
-    {
-      "id": 3,
-      "title": "Assignment 3: Algorithms",
-      "description": "Study sorting and searching algorithms.",
-      "price": "$20"
     }
 ]
