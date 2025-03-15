@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import "./App.css";
 import { useNavigate, useParams } from 'react-router-dom';
-import logo from './assets/mainLogo.png'
+import logo from './assets/2.png'
 import cards from './assets/cards.png';
 import pngegg from './assets/pngegg.png';
 import { assignments } from "./data/assignments";
@@ -30,10 +30,10 @@ function App() {
     <div className="App">
       <header className="header">
         <div className="header-content">
-          <h1 style={{marginBottom: '1vh', alignItems: 'center'}} className="logo">
-            <img src={logo} alt="Logo" style={{width: '30px', height: '30px', marginRight: '10px'}} />
-            The Assignment Store
-          </h1>
+        <h1 style={{marginBottom: '1vh'}} className="logo">
+          <img src={logo} alt="Logo" style={{width: '7vh', marginRight: '10px', verticalAlign: 'middle'}} />
+          The Assignment Store
+        </h1>
           <nav>
             <ul>
               <li><a href="#home">Home</a></li>
