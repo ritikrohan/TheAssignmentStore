@@ -6,6 +6,7 @@ import cards from './assets/cards.png';
 import pngegg from './assets/pngegg.png';
 import { assignments } from "./data/assignments";
 import PaypalButton from "./PaypalButton";
+import powered from "./assets/powered.png";
 
 function App() {
   const [email, setEmail] = useState("");
@@ -91,7 +92,10 @@ function App() {
                     <p className="tags">Tags: {selectedAssignment.tags.join(", ")}</p>
                     <p>Securely Powered by:</p>
                     <div className="payment-icons">
-                    <img src={cards} alt="Payments"/>
+                      <img src={cards} alt="Payments"/>
+                    </div>
+                    <div className="payment-icons-paypal">
+                    <img src={powered} alt="powered by paypal"/>
                     </div>
                     <p>You’ll get a download link with solution files instantly, after payment</p>
                   </div>
@@ -116,14 +120,14 @@ function App() {
       </div>
       <footer className="footer">
         <div className="footer-content">
-          <p className="disclaimer">
-            Disclaimer: The information provided on this website is for educational purposes only. We are not responsible for any errors or omissions in the information provided. By using this website, you agree to hold harmless TheAssignmentStore, its officers, directors, employees, and agents from any claims, damages, or expenses arising from the use of this website.
-          </p>
           <ul>
             <li><a href="#home">Home</a></li>
             <li><a href="#assignments">Assignments</a></li>
             <li><a href="#contact">Contact</a></li>
           </ul>
+          <p className="disclaimer">
+            Disclaimer: The information provided on this website is for educational purposes only. We are not responsible for any errors or omissions in the information provided. By using this website, you agree to hold harmless TheAssignmentStore, its officers, directors, employees, and agents from any claims, damages, or expenses arising from the use of this website.
+          </p>
           <p>&copy; 2025 TheAssignmentStore. All rights reserved.</p>
         </div>
       </footer>

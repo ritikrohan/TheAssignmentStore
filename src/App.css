@@ -256,6 +256,11 @@ button:hover {
   margin-top: 10px;
 }
 
+.payment-icons-paypal {
+  display: flex;
+  gap: 10px;
+}
+
 .payment-icons span {
   background-color: #f1f1f1;
   padding: 5px 10px;

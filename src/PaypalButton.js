@@ -1,41 +1,12 @@
 import React from "react";
-import { PayPalButtons } from "@paypal/react-paypal-js";
 
 const PaypalButton = () => {
+  const handleClick = () => {
+    window.location.href = "https://www.paypal.com/ncp/payment/2BPUN76YPXK76";
+  };
+
   return (
-    <PayPalButtons
-      createOrder={(data, actions) => {
-        return actions.order.create({
-          purchase_units: [
-            {
-              amount: {
-                value: "24.99", // Replace with your amount
-              },
-            },
-          ],
-        });
-      }}
-      onApprove={(data, actions) => {
-        return fetch("/my-server/capture-paypal-order", {
-            method: "POST",
-            headers: {
-              "Content-Type": "application/json",
-            },
-            body: JSON.stringify({
-              orderID: data.orderID
-            })
-          })
-          .then((response) => response.json())
-          .then((orderData) => {
-                const name = orderData.payer.name.given_name;
-                alert(`Transaction completed by ${name}`);
-          });
-      }}
-      onError={(err) => {
-        alert(`PayPal Checkout onError`);
-        console.error("PayPal Checkout onError", err);
-      }}
-    />
+    <button onClick={handleClick}>Pay with PayPal</button>
   );
 };
 
