@@ -7,9 +7,10 @@ import pngegg from './assets/pngegg.png';
 import { assignments } from "./data/assignments";
 import PaypalButton from "./PaypalButton";
 import powered from "./assets/powered.png";
+import Header from "./Header";
 
 function App() {
-  const [email] = useState("");
+  const [email, setEmail] = useState("");
   const [assignmentId] = useState(null);
   const [selectedAssignment, setSelectedAssignment] = useState(null);
   const navigate = useNavigate();
@@ -72,7 +73,19 @@ function App() {
                   <img src={pngegg} alt="Zip file" style={{ maxWidth: '40vh' }} />
                 </div>
                 <div style={{ display: 'flex', justifyContent: 'flex-start', flexDirection: 'column' }}>
-                  <p className="price">{selectedAssignment.price}</p>
+                  <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
+                    <div style={{ display: 'flex', alignItems: 'center' }}>
+                      <label style={{ marginRight: '10px' }}>Email Address:</label>
+                      <input
+                        type="email"
+                        placeholder="Enter your email"
+                        value={email}
+                        onChange={(e) => setEmail(e.target.value)}
+                        style={{ width: '50%', padding: '5px', fontSize: '16px' }}
+                      />
+                    </div>
+                    <p className="price">{selectedAssignment.price}</p>
+                  </div>
                   <PaypalButton/>
                   {/* this can be uncommented just in case we want to add the button */}
                   {/* <button onClick={() => handlePayNow(selectedAssignment.id)}>Pay Now</button> */}
