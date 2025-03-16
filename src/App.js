@@ -7,7 +7,6 @@ import pngegg from './assets/pngegg.png';
 import { assignments } from "./data/assignments";
 import PaypalButton from "./PaypalButton";
 import powered from "./assets/powered.png";
-import Header from "./Header";
 
 function App() {
   const [email, setEmail] = useState("");
